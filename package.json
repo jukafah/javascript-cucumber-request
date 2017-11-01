@@ -1,0 +1,24 @@
+{
+  "name": "javascript-cucumber-request",
+  "version": "1.0.0",
+  "description": "JavaScript API automation example",
+  "author": "Steve Momcilovic <steve.momcilovic@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "SET_ME"
+  },
+  "config": {
+    "host": "localhost",
+    "port": "4444"
+  },
+  "scripts": {
+    "test": "cucumberjs ./test/features/*.feature --require test/step-definitions/",
+    "report": "allure generate --clean ./results/allure",
+    "lint": "sonarlint --src 'src/**' --tests 'test/**'"
+  },
+  "devDependencies": {
+    "cucumber": "3.1.0",
+    "should": "13.1.0",
+    "request": "2.83.0"
+  }
+}
