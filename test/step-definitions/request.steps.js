@@ -1,5 +1,6 @@
 const { defineSupportCode }     = require('cucumber');
 const service                  = require('../../src/services/service');
+const response                  = require('../../src/models/response');
 const should                    = require('should');
 
 let statusCode;
@@ -11,8 +12,7 @@ defineSupportCode(function({Given, When, Then}) {
     });
 
     Then('I recieve status code {int}', function (code) {
-        service.getResponse().statusCode.should.be.equal(code);
-        // statusCode.should.equal(code);
+        response.statusCode.should.be.equal(code);
     });
 
 });

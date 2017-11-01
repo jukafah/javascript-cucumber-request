@@ -1,20 +1,15 @@
-const request = require('request');
-
-let response;
-let body;
+const request   = require('request');
+const response  = require('../models/response');
 
 function Service() {}
 
 Service.prototype.get = function(endpoint, callback) {
-    request.get(endpoint, function(error, res, bdy) {
-        response = res;
-        body = bdy;
+    request.get(endpoint, function(error, res) {
+        response.statusCode = res.statusCode;
+        response.body = res.body;
         callback();
     });
 };
 
-Service.prototype.getResponse = function() {
-    return response;
-};
 
 module.exports = new Service();
