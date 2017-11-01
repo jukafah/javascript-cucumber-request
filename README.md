@@ -1,4 +1,4 @@
-# talon-ui-automation
+# javascript-cucumber-request
 
 **Resources**
 - [Cucumberjs](https://github.com/cucumber/cucumber-js)
