@@ -1,9 +1,11 @@
+// class properties
 function Response(statusCode, body) {
     this.statusCode = statusCode;
     this.body = body;
 }
 
-// adding functions
+// class functions
+
 // Response.prototype = {
 //     getResponse: function() {
 //         return this.response;

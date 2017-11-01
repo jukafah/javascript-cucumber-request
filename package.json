@@ -12,7 +12,7 @@
     "port": "4444"
   },
   "scripts": {
-    "test": "cucumberjs ./test/features/*.feature --require test/step-definitions/",
+    "test": "cucumberjs ./test/features/*.feature --require test/step-definitions/ --require test/support",
     "report": "allure generate --clean ./results/allure",
     "lint": "sonarlint --src 'src/**' --tests 'test/**'"
   },
